@@ -1,0 +1,51 @@
+{
+  "name": "root",
+  "children": [
+    {
+      "name": "left@L1",
+      "children": [
+        {
+          "name": "left@2",
+          "children": [
+            {"name": "left@L3", "size": 3938},
+            {"name": "right@L3", "size": 3812}
+          ]
+        },
+        {
+          "name": "right@L2",
+          "children": [
+            {"name": "left@L3",
+              "children": [
+                {"name": "left@L3", "size": 3534},
+                {"name": "right@L3",
+                  "children": [
+                    {"name": "left@L3",
+                      "children": [
+                        {"name": "left@L3", "size": 3534},
+                        {"name": "right@L3", "size": 5731}
+                      ]},
+                    {"name": "right@L3", "size": 5731}
+                  ]}
+              ]},
+            {"name": "right@L3", "size": 5731}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "right@L1",
+      "children": [
+        {"name": "left@Level2",
+          "children": [
+            {"name": "left@L3", "size": 3534},
+            {"name": "right@L3", "size": 5731}
+          ]},
+        {"name": "right@L3",
+          "children": [
+            {"name": "left@L3", "size": 3534},
+            {"name": "right@L3", "size": 5731}
+          ]}
+      ]
+    }
+  ]
+}
