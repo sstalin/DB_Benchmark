@@ -3,48 +3,140 @@
   "children": [
     {
       "name": "left@L1",
+      "predicate": "",
+      "label": "",
+      "cost": "",
       "children": [
         {
           "name": "left@2",
+          "predicate": "",
+          "label": "",
+          "cost": "",
           "children": [
-            {"name": "left@L3", "size": 3938},
-            {"name": "right@L3", "size": 3812}
+            {
+              "name": "left@L3",
+              "predicate": "",
+              "label": "",
+              "cost": ""
+            },
+            {
+              "name": "right@L3",
+              "predicate": "",
+              "label": "",
+              "cost": ""
+            }
           ]
         },
         {
           "name": "right@L2",
+          "predicate":"",
+          "label": "",
+          "cost": "",
           "children": [
-            {"name": "left@L3",
+            {
+              "name": "left@L3",
+              "predicate":"",
+              "label": "",
+              "cost": "",
               "children": [
-                {"name": "left@L3", "size": 3534},
-                {"name": "right@L3",
+                {
+                  "name": "left@L3",
+                  "predicate":"",
+                  "label": "",
+                  "cost": ""
+                },
+                {
+                  "name": "right@L3",
+                  "predicate":"",
+                  "label": "",
+                  "cost": "",
                   "children": [
-                    {"name": "left@L3",
+                    {
+                      "name": "left@L3",
+                      "predicate":"",
+                      "label": "",
+                      "cost": "",
                       "children": [
-                        {"name": "left@L3", "size": 3534},
-                        {"name": "right@L3", "size": 5731}
-                      ]},
-                    {"name": "right@L3", "size": 5731}
-                  ]}
-              ]},
-            {"name": "right@L3", "size": 5731}
+                        {
+                          "name": "left@L3",
+                          "predicate":"",
+                          "label": "",
+                          "cost": ""
+                        },
+                        {
+                          "name": "right@L3",
+                          "predicate":"",
+                          "label": "",
+                          "cost": ""
+                        }
+                      ]
+                    },
+                    {
+                      "name": "right@L3",
+                      "predicate":"",
+                      "label": "",
+                      "cost": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "right@L3",
+              "predicate":"",
+              "label": "",
+              "cost": ""
+            }
           ]
         }
       ]
     },
     {
       "name": "right@L1",
+      "predicate":"",
+      "label": "",
+      "cost": "",
       "children": [
-        {"name": "left@Level2",
+        {
+          "name": "left@Level2",
+          "predicate":"",
+          "label": "",
+          "cost": "",
           "children": [
-            {"name": "left@L3", "size": 3534},
-            {"name": "right@L3", "size": 5731}
-          ]},
-        {"name": "right@L3",
+            {
+              "name": "left@L3",
+              "predicate":"",
+              "label": "",
+              "cost": ""
+            },
+            {
+              "name": "right@L3",
+              "predicate":"",
+              "label": "",
+              "cost": ""
+            }
+          ]
+        },
+        {
+          "name": "right@L3",
+          "predicate":"",
+          "label": "",
+          "cost": "",
           "children": [
-            {"name": "left@L3", "size": 3534},
-            {"name": "right@L3", "size": 5731}
-          ]}
+            {
+              "name": "left@L3",
+              "predicate":"",
+              "label": "",
+              "cost": ""
+            },
+            {
+              "name": "right@L3",
+              "predicate":"",
+              "label": "",
+              "cost": ""
+            }
+          ]
+        }
       ]
     }
   ]
