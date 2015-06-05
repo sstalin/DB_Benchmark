@@ -1,0 +1,143 @@
+{
+  "name": "root",
+  "children": [
+    {
+      "name": "left@L1",
+      "predicate": "",
+      "label": "",
+      "cost": "",
+      "children": [
+        {
+          "name": "left@2",
+          "predicate": "",
+          "label": "",
+          "cost": "",
+          "children": [
+            {
+              "name": "left@L3",
+              "predicate": "",
+              "label": "",
+              "cost": ""
+            },
+            {
+              "name": "right@L3",
+              "predicate": "",
+              "label": "",
+              "cost": ""
+            }
+          ]
+        },
+        {
+          "name": "right@L2",
+          "predicate":"",
+          "label": "",
+          "cost": "",
+          "children": [
+            {
+              "name": "left@L3",
+              "predicate":"",
+              "label": "",
+              "cost": "",
+              "children": [
+                {
+                  "name": "left@L3",
+                  "predicate":"",
+                  "label": "",
+                  "cost": ""
+                },
+                {
+                  "name": "right@L3",
+                  "predicate":"",
+                  "label": "",
+                  "cost": "",
+                  "children": [
+                    {
+                      "name": "left@L3",
+                      "predicate":"",
+                      "label": "",
+                      "cost": "",
+                      "children": [
+                        {
+                          "name": "left@L3",
+                          "predicate":"",
+                          "label": "",
+                          "cost": ""
+                        },
+                        {
+                          "name": "right@L3",
+                          "predicate":"",
+                          "label": "",
+                          "cost": ""
+                        }
+                      ]
+                    },
+                    {
+                      "name": "right@L3",
+                      "predicate":"",
+                      "label": "",
+                      "cost": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "right@L3",
+              "predicate":"",
+              "label": "",
+              "cost": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "right@L1",
+      "predicate":"",
+      "label": "",
+      "cost": "",
+      "children": [
+        {
+          "name": "left@Level2",
+          "predicate":"",
+          "label": "",
+          "cost": "",
+          "children": [
+            {
+              "name": "left@L3",
+              "predicate":"",
+              "label": "",
+              "cost": ""
+            },
+            {
+              "name": "right@L3",
+              "predicate":"",
+              "label": "",
+              "cost": ""
+            }
+          ]
+        },
+        {
+          "name": "right@L3",
+          "predicate":"",
+          "label": "",
+          "cost": "",
+          "children": [
+            {
+              "name": "left@L3",
+              "predicate":"",
+              "label": "",
+              "cost": ""
+            },
+            {
+              "name": "right@L3",
+              "predicate":"",
+              "label": "",
+              "cost": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
