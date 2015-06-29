@@ -1,13 +1,20 @@
+import sys
 from pydal import *
 import querytree as qt
 import cx_Oracle
+from query_index import *
+from qp_parsers import *
 
 oracle_uri ='oracle://web2py/DePaul123@' + cx_Oracle.makedsn('rasinsrv01.cstcis.cti.depaul.edu', 1521, 'oracle11g')
 # print cx_Oracle.makedsn('localhost', 1521, 'oracle11g')
 
 query1 = "select d_year, s_city, p_brand1, sum(lo_revenue - lo_supplycost) as profit from dwdate, customer, supplier, part, lineorder where lo_custkey = c_custkey and lo_suppkey = s_suppkey and lo_partkey = p_partkey and lo_orderdate = d_datekey and s_nation = 'UNITED STATES' and (d_year = 1997 or d_year = 1998) and p_category = 'MFGR#14' group by d_year, s_city, p_brand1 order by d_year, s_city, p_brand1"
 
+# creates dictionary object of the query file. This object can be used for testing.
+q_index = create_index('SSBM_original_queries.sql')
+#query  = q_index['Q4.3']
 
+#print 'Working with query : ', query 
 
 def run_query(uri, query):
     """
@@ -18,7 +25,9 @@ def run_query(uri, query):
     # db.executesql("alter system flush buffer_cache;")
     db.executesql("explain plan for " + query)
     q = db.executesql('select * from TABLE(dbms_xplan.display)')
-
+    for l in q:
+        print l
+    print '\n\n\n'
     return q
 
 
@@ -49,6 +58,16 @@ def clean_query(query):
     info.pop(0)
 
     scores.sort(key = lambda x: int(x.split('|')[0]))
+#    print '******************************************'
+#    for ln_scores in scores:
+#        print ln_scores
+#    print '******************************************'
+#    print '\n\n\n'
+#    for ln_info in info:
+#        print ln_info
+#    print '******************************************'
+#    print '\n\n\n'
+
     return (scores, info)
 
 def get_nodes(scores, info):
@@ -76,6 +95,7 @@ def get_nodes(scores, info):
         #     for i in info:
         #         if node[1].strip() == i.split()[0].strip():
         #             print i
+
     return nodes
 
 def get_tree(tree_list):
@@ -97,8 +117,16 @@ def get_tree(tree_list):
 
 
 
-rawq = run_query(oracle_uri, query1)
-scores, info = clean_query(rawq)
-nodes = get_nodes(scores, info)
-t = get_tree(nodes)
-print(t)
+#rawq = run_query(oracle_uri, query)
+#scores, info = clean_query(rawq)
+#nodes = get_nodes(scores, info)
+#t = get_tree(nodes)
+#print(t)
+for key in q_index:
+    query_plan = run_query(oracle_uri, q_index[key])
+    parser = Oracle_QP_Parser(query_plan)
+    fn = '../data/' + key + '.json'
+    f = open(fn, 'w')
+    f.write(parser.qpTree().toJSON())
+    f.close()
+
