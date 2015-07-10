@@ -1,0 +1,12 @@
+{'operation': 'SELECT STATEMENT', 'rows': '16597', 'bytes': '1377K'}
+	{'operation': 'SORT GROUP BY', 'rows': '16597', 'bytes': '1377K'}
+		{'operation': 'HASH JOIN', 'rows': '16597', 'bytes': '1377K', 'predicate': [' access("LO_ORDERDATE"="D_DATEKEY")\'', 'access("LO_ORDERDATE"="D_DATEKEY")\'', 'access("LO_ORDERDATE"="D_DATEKEY")\'', 'access("LO_ORDERDATE"="D_DATEKEY")\'', 'access("LO_ORDERDATE"="D_DATEKEY")\'', 'access("LO_ORDERDATE"="D_DATEKEY")\'', 'access("LO_ORDERDATE"="D_DATEKEY")\',']}
+			{'operation': 'TABLE ACCESS FULL DWDATE', 'rows': '729', 'bytes': '7290', 'predicate': [' filter("D_YEAR"=1997 OR "D_YEAR"=1998)\'', 'filter("D_YEAR"=1997 OR "D_YEAR"=1998)\'', 'filter("D_YEAR"=1997 OR "D_YEAR"=1998)\'', 'filter("D_YEAR"=1997 OR "D_YEAR"=1998)\'', 'filter("D_YEAR"=1997 OR "D_YEAR"=1998)\'', 'filter("D_YEAR"=1997 OR "D_YEAR"=1998)\',']}
+			{'operation': 'HASH JOIN', 'rows': '54816', 'bytes': '4014K', 'predicate': [' access("LO_PARTKEY"="P_PARTKEY")\'', 'access("LO_PARTKEY"="P_PARTKEY")\'', 'access("LO_PARTKEY"="P_PARTKEY")\'', 'access("LO_PARTKEY"="P_PARTKEY")\'', 'access("LO_PARTKEY"="P_PARTKEY")\',']}
+				{'operation': 'HASH JOIN', 'rows': '54816', 'bytes': '4014K', 'predicate': [' access("LO_PARTKEY"="P_PARTKEY")\'', 'access("LO_PARTKEY"="P_PARTKEY")\'', 'access("LO_PARTKEY"="P_PARTKEY")\'', 'access("LO_PARTKEY"="P_PARTKEY")\'', 'access("LO_PARTKEY"="P_PARTKEY")\',']}
+					{'operation': 'TABLE ACCESS FUL PART', 'rows': '23555', 'bytes': '529K', 'predicate': [' filter("P_CATEGORY"=\\\'MFGR#14\\\')\'', 'filter("P_CATEGORY"=\\\'MFGR#14\\\')\'', 'filter("P_CATEGORY"=\\\'MFGR#14\\\')\'', 'filter("P_CATEGORY"=\\\'MFGR#14\\\')\',']}
+					{'operation': 'HASH JOIN', 'rows': '945K', 'bytes': '46M', 'predicate': [' access("LO_SUPPKEY"="S_SUPPKEY")\'', 'access("LO_SUPPKEY"="S_SUPPKEY")\'', 'access("LO_SUPPKEY"="S_SUPPKEY")\',']}
+						{'operation': 'HASH JOIN', 'rows': '945K', 'bytes': '46M', 'predicate': [' access("LO_SUPPKEY"="S_SUPPKEY")\'', 'access("LO_SUPPKEY"="S_SUPPKEY")\'', 'access("LO_SUPPKEY"="S_SUPPKEY")\',']}
+							{'operation': 'TABLE ACCESS FU SUPPLIER', 'rows': '1590', 'bytes': '39750', 'predicate': [' filter("S_NATION"=\\\'UNITED STATES\\\')\',)] filter("S_NATION"=\\\'UNITED STATES\\\')\',)]']}
+							{'operation': 'TABLE ACCESS FU LINEORDER', 'rows': '23M', 'bytes': '617M'}
+

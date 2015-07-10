@@ -1,0 +1,20 @@
+//root
+{
+  predicate:'',
+  label:'',
+  cost: '',
+  left:{
+	predicate:'',
+	label:'',
+	cost:'',
+	left: null,
+	right:null	
+  },
+  right:{
+	predicate:'',
+	label:'',
+	cost:'',
+	left: null,
+	right:null	
+  }
+}
