@@ -20,7 +20,9 @@ var svg = d3.select("body").append("svg")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json("data/Q2.1.json", function (error, flare) {
+var fn = "data/" + location.hash.replace("#", '') + ".json";
+
+d3.json(fn, function (error, flare) {
     root = createChildrenArray(flare);
     root.x0 = width / 2;
     root.y0 = 0;
