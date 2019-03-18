@@ -1,5 +1,5 @@
 # DB_Benchmark
-Database Benchmarking Famework
+Query plans visualizations
 
 ### Sample D3 visulizations of a query plan execution tree. Data is generated from Oracle query plan responses for various SQL queries in Star Schema Benchmark.
 
